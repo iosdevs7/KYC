@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CDTDataObjectMapper.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CDTDataObjectMapper</TokenIdentifier>
+			<Abstract type="html">The CDTObjectMapper handles the conversion of Objective-C objects to NSDictionary JSON objects.  Serializable objects must conform to the CDTDataObject protocol.  Top level properties will be serialized if they are of the type NSString, NSNumber, NSNull, or NSDate.  Properties with primitive data types will also be serialized.  Additional types may be serialized by using the setPropertySerializer:forClassName:withDataType: method.  For example, support for CLLocation could be added by providing a property serializer for CLLocation.</Abstract>
+			<DeclaredIn>CDTDataObjectMapper.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CDTDataObjectMapper/setPropertySerializer:forClassName:withDataType:</TokenIdentifier>
+			<Abstract type="html">Provides a custom serializer for a class.  With a custom serializer, you can handle cross platform serialization of any object or override the default serialization of an object.  For example, the CDTDataObjectMapper serializes NSDate objects.  However, you can use this extension to override how NSDate objects are serialized.  You also might provide serialization of CLLocation objects, which are currently ignored by the CDTDataObjectMapper.  All properties with the newly added data type will be serialized.</Abstract>
+			<DeclaredIn>CDTDataObjectMapper.h</DeclaredIn>
+			
+			<Declaration>- (void)setPropertySerializer:(id&lt;CDTPropertySerializer&gt;)serializer forClassName:(NSString *)className withDataType:(NSString *)dataType</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serializer</Name>
+					<Abstract type="html">Specifies the CDTPropertySerializer that handles serialization of properties with type data type and class.</Abstract>
+				</Parameter><Parameter>
+					<Name>className</Name>
+					<Abstract type="html">Specifies the name of the class to serialize with this serializer.</Abstract>
+				</Parameter><Parameter>
+					<Name>dataType</Name>
+					<Abstract type="html">Specifies the cross-platform data type of the class to be serialized.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setPropertySerializer:forClassName:withDataType:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

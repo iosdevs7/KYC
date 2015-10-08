@@ -1,0 +1,2 @@
+PODS_IMFCORE_FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/IMFCore/frameworks"
+PODS_IMFCORE_OTHER_LDFLAGS = -l"stdc++.6" -l"z" -framework "IMFCore"

@@ -1,13 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IaI-Q0-t0F">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Know Your Child-->
+        <scene sceneID="R0e-sh-NaE">
+            <objects>
+                <viewController id="iKc-BA-fub" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xnG-Nt-kjs"/>
+                        <viewControllerLayoutGuide type="bottom" id="8m1-of-JoQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w3K-rc-BJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovi-Id-Crq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Personality Analysis of Child">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="92" y="336" width="217" height="45"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="z48-Fb-SfB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN6-FJ-aG0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Medical Help">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="155" y="407" width="90" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Rlg-aZ-Okd" kind="show" id="UJh-gf-GME"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kyc.png" translatesAutoresizingMaskIntoConstraints="NO" id="W18-7I-Tb4">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="102" width="148" height="204"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ovi-Id-Crq"/>
+                                <exclude reference="SN6-FJ-aG0"/>
+                                <exclude reference="W18-7I-Tb4"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ovi-Id-Crq"/>
+                                <include reference="SN6-FJ-aG0"/>
+                                <include reference="W18-7I-Tb4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Know Your Child" id="X3E-CE-WlR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhF-ib-kRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936" y="111"/>
+        </scene>
+        <!--Personality Analysis-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +82,452 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvl-sk-Hij">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Analyse">
+                                    <color key="titleColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="164" y="500" width="72" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="0s4-mY-oeU" kind="show" identifier="analyseSegue" id="6XL-74-dWd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a description of your child" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c67-1L-LKp">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="78" y="118" width="245" height="21"/>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkH-ux-xRX">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.8468225976" green="0.84387959229999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Call me Ishmael. Some years ago-never mind how long precisely-having little or no money in my purse,
+and nothing particular to interest me on shore, I thought I would sail about a little and see the watery
+part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever
+I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever
+I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral
+I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral
+principle to prevent me from deliberately stepping into the street, and methodically knocking people's
+hats off-then, I account it high time to get to sea as soon as I can. This is my substitute for pistol
+and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship.
+There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or
+other, cherish very nearly the same feelings towards the ocean with me.
+
+There now is your insular city of the Manhattoes, belted round by wharves as Indian isles by coral
+reefs-commerce surrounds it with her surf. Right and left, the streets take you waterward. Its extreme 
+downtown is the battery, where that noble mole is washed by waves, and cooled by breezes, which a few
+hours previous were out of sight of land. Look at the crowds of water-gazers there.
+
+Circumambulate the city of a dreamy Sabbath afternoon. Go from Corlears Hook to Coenties Slip, and from
+thence, by Whitehall, northward. What do you see?-Posted like silent sentinels all around the town, stand
+thousands upon thousands of mortal men fixed in ocean reveries. Some leaning against the spiles; some
+seated upon the pier-heads; some looking over the bulwarks of ships from China; some high aloft in the
+rigging, as if striving to get a still better seaward peep. But these are all landsmen; of week days pent
+up in lath and plaster-tied to counters, nailed to benches, clinched to desks. How then is this? Are the
+green fields gone? What do they here?
+
+But look! here come more crowds, pacing straight for the water, and seemingly bound for a dive. Strange!
+Nothing will content them but the extremest limit of the land; loitering under the shady lee of yonder
+warehouses will not suffice. No. They must get just as nigh the water as they possibly can without
+falling in. And there they stand-miles of them-leagues. Inlanders all, they come from lanes and alleys,
+streets and avenues-north, east, south, and west. Yet here they all unite. Tell me, does the magnetic
+virtue of the needles of the compasses of all those ships attract them thither?
+
+Once more. Say you are in the country; in some high land of lakes. Take almost any path you please, and
+ten to one it carries you down in a dale, and leaves you there by a pool in the stream. There is magic
+in it. Let the most absent-minded of men be plunged in his deepest reveries-stand that man on his legs,
+set his feet a-going, and he will infallibly lead you to water, if water there be in all that region.
+Should you ever be athirst in the great American desert, try this experiment, if your caravan happen to
+be supplied with a metaphysical professor. Yes, as every one knows, meditation and water are wedded for
+ever.
+
+But here is an artist. He desires to paint you the dreamiest, shadiest, quietest, most enchanting bit 
+of romantic landscape in all the valley of the Saco. What is the chief element he employs? There stand
+his trees, each with a hollow trunk, as if a hermit and a crucifix were within; and here sleeps his
+meadow, and there sleep his cattle; and up from yonder cottage goes a sleepy smoke. Deep into distant
+woodlands winds a mazy way, reaching to overlapping spurs of mountains bathed in their hill-side blue.
+But though the picture lies thus tranced, and though this pine-tree shakes down its sighs like leaves
+upon this shepherd's head, yet all were vain, unless the shepherd's eye were fixed upon the magic stream
+before him. Go visit the Prairies in June, when for scores on scores of miles you wade knee-deep among
+Tiger-lilies-what is the one charm wanting?-Water-there is not a drop of water there! Were Niagara but
+a cataract of sand, would you travel your thousand miles to see it? Why did the poor poet of Tennessee,
+upon suddenly receiving two handfuls of silver, deliberate whether to buy him a coat, which he sadly
+needed, or invest his money in a pedestrian trip to Rockaway Beach? Why is almost every robust healthy
+boy with a robust healthy soul in him, at some time or other crazy to go to sea? Why upon your first
+voyage as a passenger, did you yourself feel such a mystical vibration, when first told that you and
+your ship were now out of sight of land? Why did the old Persians hold the sea holy? Why did the Greeks
+give it a separate deity, and own brother of Jove? Surely all this is not without meaning. And still
+deeper the meaning of that story of Narcissus, who because he could not grasp the tormenting, mild
+image he saw in the fountain, plunged into it and was drowned. But that same image, we ourselves see
+in all rivers and oceans. It is the image of the ungraspable phantom of life; and this is the key to
+it all.
+
+Now, when I say that I am in the habit of going to sea whenever I begin to grow hazy about the eyes,
+and begin to be over conscious of my lungs, I do not mean to have it inferred that I ever go to sea
+as a passenger. For to go as a passenger you must needs have a purse, and a purse is but a rag unless
+you have something in it. Besides, passengers get sea-sick-grow quarrelsome-don't sleep of nights-do
+not enjoy themselves much, as a general thing;-no, I never go as a passenger; nor, though I am something
+of a salt, do I ever go to sea as a Commodore, or a Captain, or a Cook. I abandon the glory and
+distinction of such offices to those who like them. For my part, I abominate all honourable respectable
+toils, trials, and tribulations of every kind whatsoever. It is quite as much as I can do to take care
+of myself, without taking care of ships, barques, brigs, schooners, and what not. And as for going as
+cook,-though I confess there is considerable glory in that, a cook being a sort of officer on
+ship-board-yet, somehow, I never fancied broiling fowls;-though once broiled, judiciously buttered,
+and judgmatically salted and peppered, there is no one who will speak more respectfully, not to say
+reverentially, of a broiled fowl than I will. It is out of the idolatrous dotings of the old Egyptians
+upon broiled ibis and roasted river horse, that you see the mummies of those creatures in their huge
+bake-houses the pyramids.
+
+No, when I go to sea, I go as a simple sailor, right before the mast, plumb down into the forecastle,
+aloft there to the royal mast-head. True, they rather order me about some, and make me jump from spar
+to spar, like a grasshopper in a May meadow. And at first, this sort of thing is unpleasant enough.
+It touches one's sense of honour, particularly if you come of an old established family in the land,
+the Van Rensselaers, or Randolphs, or Hardicanutes. And more than all, if just previous to putting
+your hand into the tar-pot, you have been lording it as a country schoolmaster, making the tallest
+boys stand in awe of you. The transition is a keen one, I assure you, from a schoolmaster to a sailor,
+and requires a strong decoction of Seneca and the Stoics to enable you to grin and bear it. But even
+this wears off in time.
+
+What of it, if some old hunks of a sea-captain orders me to get a broom and sweep down the decks? What
+does that indignity amount to, weighed, I mean, in the scales of the New Testament? Do you think the
+archangel Gabriel thinks anything the less of me, because I promptly and respectfully obey that old
+hunks in that particular instance? Who ain't a slave? Tell me that. Well, then, however the old
+sea-captains may order me about-however they may thump and punch me about, I have the satisfaction of
+knowing that it is all right; that everybody else is one way or other served in much the same way-either
+in a physical or metaphysical point of view, that is; and so the universal thump is passed round, and
+all hands should rub each other's shoulder-blades, and be content.
+
+Again, I always go to sea as a sailor, because they make a point of paying me for my trouble, whereas
+they never pay passengers a single penny that I ever heard of. On the contrary, passengers themselves
+must pay. And there is all the difference in the world between paying and being paid. The act of paying
+is perhaps the most uncomfortable infliction that the two orchard thieves entailed upon us. But BEING
+PAID,-what will compare with it? The urbane activity with which a man receives money is really marvellous,
+considering that we so earnestly believe money to be the root of all earthly ills, and that on no account
+can a monied man enter heaven. Ah! how cheerfully we consign ourselves to perdition!
+
+Finally, I always go to sea as a sailor, because of the wholesome exercise and pure air of the fore-castle
+deck. For as in this world, head winds are far more prevalent than winds from astern (that is, if you never
+violate the Pythagorean maxim), so for the most part the Commodore on the quarter-deck gets his atmosphere
+at second hand from the sailors on the forecastle. He thinks he breathes it first; but not so. In much the
+same way do the commonalty lead their leaders in many other things, at the same time that the leaders little
+suspect it. But wherefore it was that after having repeatedly smelt the sea as a merchant sailor, I should
+now take it into my head to go on a whaling voyage; this the invisible police officer of the Fates, who has
+the constant surveillance of me, and secretly dogs me, and influences me in some unaccountable way-he can
+better answer than any one else. And, doubtless, my going on this whaling voyage, formed part of the grand
+programme of Providence that was drawn up a long time ago. It came in as a sort of brief interlude and solo
+between more extensive performances. I take it that this part of the bill must have run something like this:
+
+"GRAND CONTESTED ELECTION FOR THE PRESIDENCY OF THE UNITED STATES. "WHALING VOYAGE BY ONE ISHMAEL. "BLOODY
+BATTLE IN AFFGHANISTAN."
+
+Though I cannot tell why it was exactly that those stage managers, the Fates, put me down for this shabby
+part of a whaling voyage, when others were set down for magnificent parts in high tragedies, and short and
+easy parts in genteel comedies, and jolly parts in farces-though I cannot tell why this was exactly; yet,
+now that I recall all the circumstances, I think I can see a little into the springs and motives which
+being cunningly presented to me under various disguises, induced me to set about performing the part I did,
+besides cajoling me into the delusion that it was a choice resulting from my own unbiased freewill and
+discriminating judgment.
+
+Chief among these motives was the overwhelming idea of the great whale himself. Such a portentous and
+mysterious monster roused all my curiosity. Then the wild and distant seas where he rolled his island bulk;
+the undeliverable, nameless perils of the whale; these, with all the attending marvels of a thousand
+Patagonian sights and sounds, helped to sway me to my wish. With other men, perhaps, such things would not
+have been inducements; but as for me, I am tormented with an everlasting itch for things remote. I love to
+sail forbidden seas, and land on barbarous coasts. Not ignoring what is good, I am quick to perceive a
+horror, and could still be social with it-would they let me-since it is but well to be on friendly terms
+with all the inmates of the place one lodges in.
+
+By reason of these things, then, the whaling voyage was welcome; the great flood-gates of the wonder-world
+swung open, and in the wild conceits that swayed me to my purpose, two and two there floated into my inmost
+soul, endless processions of the whale, and, mid most of them all, one grand hooded phantom, like a snow
+hill in the air.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="37" y="170" width="327" height="300"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Cvl-sk-Hij"/>
+                                <exclude reference="c67-1L-LKp"/>
+                                <exclude reference="tkH-ux-xRX"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Cvl-sk-Hij"/>
+                                <include reference="c67-1L-LKp"/>
+                                <include reference="tkH-ux-xRX"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Personality Analysis" id="HBh-aC-fdd"/>
+                    <connections>
+                        <outlet property="description" destination="c67-1L-LKp" id="vQa-07-S37"/>
+                        <outlet property="myTextView" destination="tkH-ux-xRX" id="bLi-jn-pOt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1734" y="111"/>
+        </scene>
+        <!--Health View Controller-->
+        <scene sceneID="oIu-Ot-Fka">
+            <objects>
+                <viewController id="Rlg-aZ-Okd" customClass="HealthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wdf-Fh-a0h"/>
+                        <viewControllerLayoutGuide type="bottom" id="Acg-k3-8hd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cnv-Hx-U4j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Question Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivM-O0-mGb">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="46" y="101" width="155" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54M-Zg-xtC">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="46" y="164" width="299" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpl-Q5-o1E">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="354" y="164" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="submitButton:" destination="Rlg-aZ-Okd" eventType="touchUpInside" id="Qkx-Ud-mlU"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6pn-cC-354">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="n2w-zu-fMb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n2w-zu-fMb" id="FdY-UW-wpU">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="239" width="318" height="325"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rlg-aZ-Okd" id="JcN-UW-xJu"/>
+                                    <outlet property="delegate" destination="Rlg-aZ-Okd" id="gNq-B0-VHx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ivM-O0-mGb"/>
+                                <exclude reference="54M-Zg-xtC"/>
+                                <exclude reference="bpl-Q5-o1E"/>
+                                <exclude reference="6pn-cC-354"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ivM-O0-mGb"/>
+                                <include reference="54M-Zg-xtC"/>
+                                <include reference="bpl-Q5-o1E"/>
+                                <include reference="6pn-cC-354"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="myTableView" destination="6pn-cC-354" id="ECi-Fr-fh6"/>
+                        <outlet property="questionTextField" destination="54M-Zg-xtC" id="gAI-Qf-eQc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xzf-ly-lvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936" y="934"/>
+        </scene>
+        <!--Traits-->
+        <scene sceneID="WK5-tF-sUE">
+            <objects>
+                <viewController storyboardIdentifier="AnswerViewController" id="7Eb-aL-tv2" customClass="AnswerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qMe-0e-Ddx"/>
+                        <viewControllerLayoutGuide type="bottom" id="CgE-Fd-AEP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Jd-h0-WLu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="NOK-1v-gDe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="cgB-gn-syS" detailTextLabel="LSG-Gc-qw9" style="IBUITableViewCellStyleValue1" id="grs-5Q-yYF">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="grs-5Q-yYF" id="aFw-1f-ysy">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cgB-gn-syS">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LSG-Gc-qw9">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="536"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Eb-aL-tv2" id="wJi-tG-AtT"/>
+                                    <outlet property="delegate" destination="7Eb-aL-tv2" id="WX3-PM-9qG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="NOK-1v-gDe"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="NOK-1v-gDe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Traits" id="Tn4-cM-1Xh"/>
+                    <connections>
+                        <outlet property="tableView" destination="NOK-1v-gDe" id="6v1-ei-N2F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83O-1n-787" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="934"/>
+        </scene>
+        <!--Summary-->
+        <scene sceneID="LsY-8O-eZQ">
+            <objects>
+                <viewController id="s7V-Pt-r8t" customClass="SummaryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4ed-sd-Dvm"/>
+                        <viewControllerLayoutGuide type="bottom" id="mlY-rF-8Xs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YdS-Tg-0t6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekt-Ke-gEg">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="113" width="348" height="313"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ekt-Ke-gEg"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ekt-Ke-gEg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Summary" id="a7Y-4c-KA1"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="summaryText" destination="Ekt-Ke-gEg" id="gYk-r0-ukX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEt-sS-vTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3367.5" y="120"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9Zt-y4-jUq">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0s4-mY-oeU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="g04-Ir-1Oy">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="s7V-Pt-r8t" kind="relationship" relationship="viewControllers" id="r9j-nW-Y44"/>
+                        <segue destination="7Eb-aL-tv2" kind="relationship" relationship="viewControllers" id="6az-SV-w4a"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dq-Mr-pT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2568" y="120"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9mE-W1-SmX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IaI-Q0-t0F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BKF-wB-y9F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iKc-BA-fub" kind="relationship" relationship="rootViewController" id="wnq-os-g9z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aq3-BI-jAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="111"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kyc.png" width="300" height="417"/>
+    </resources>
 </document>

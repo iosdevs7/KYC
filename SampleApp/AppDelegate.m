@@ -7,6 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import <facebookSDK/FacebookSDK.h>
+#import <GooglePlus/GooglePlus.h>
+#import <IMFCore/IMFCore.h>
+#import <IMFPush/IMFPush.h>
+#import <IMFFacebookAuthenticationHandler.h>
+#import <IMFGoogleAuthenticationHandler.h>
+#import <CloudantToolkit/CloudantToolkit.h>
+
 
 @interface AppDelegate ()
 
@@ -17,6 +25,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+   
+    NSString *configurationPath = [[NSBundle mainBundle]pathForResource:@"sampleapp" ofType:@"plist"];
+    NSDictionary *configuration = [NSDictionary dictionaryWithContentsOfFile:configurationPath];
+    NSString *applicationId = configuration[@"applicationId"];
+    NSString *applicationRoute = configuration[@"applicationRoute"];
+    [[IMFClient sharedInstance] initializeWithBackendRoute:applicationRoute backendGUID:applicationId];
+    
+    
+    /*Authentication is required to connect to backend services,
+     For this sample App all 3 handlers are registered locally but only 1 will be use
+     depending how the client was register in AMS (Advanced Mobile Access)
+     */
+    [[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
+    [[IMFGoogleAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
+
     return YES;
 }
 
@@ -35,11 +58,20 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    // Logs 'install' and 'app activate' App Events.
+    [FBAppEvents activateApp];
 }
-
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // attempt to extract a token from the url
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
 
 @end

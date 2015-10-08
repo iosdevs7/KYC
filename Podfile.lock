@@ -1,0 +1,66 @@
+PODS:
+  - Bolts (1.1.4)
+  - CDTDatastore (0.12.1):
+    - CDTDatastore/no-arc (= 0.12.1)
+    - CocoaLumberjack (= 2.0.0-beta4)
+    - FMDB (= 2.3)
+  - CDTDatastore/no-arc (0.12.1):
+    - CocoaLumberjack (= 2.0.0-beta4)
+    - FMDB (= 2.3)
+  - CloudantQueryObjc (1.0.1):
+    - CDTDatastore (>= 0.7)
+    - CocoaLumberjack (= 2.0.0-beta4)
+  - CloudantToolkit (0.1.2):
+    - CDTDatastore (~> 0.12.0)
+    - CloudantQueryObjc (~> 1.0.0)
+    - IMFCore
+  - CocoaLumberjack (2.0.0-beta4):
+    - CocoaLumberjack/Default (= 2.0.0-beta4)
+    - CocoaLumberjack/Extensions (= 2.0.0-beta4)
+  - CocoaLumberjack/Core (2.0.0-beta4)
+  - CocoaLumberjack/Default (2.0.0-beta4):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.0-beta4):
+    - CocoaLumberjack/Default
+  - Facebook-iOS-SDK (3.23.0):
+    - Bolts (~> 1.0)
+  - FMDB (2.3):
+    - FMDB/standard (= 2.3)
+  - FMDB/common (2.3)
+  - FMDB/standard (2.3):
+    - FMDB/common
+  - google-plus-ios-sdk (1.7.1)
+  - IMFCore (0.1.2)
+  - IMFFacebookAuthentication (0.1.0):
+    - Facebook-iOS-SDK (~> 3.19)
+    - IMFCore (~> 0.1)
+  - IMFGoogleAuthentication (0.1.0):
+    - google-plus-ios-sdk (~> 1.7)
+    - IMFCore (~> 0.1)
+  - IMFPush (0.1.2):
+    - IMFCore
+
+DEPENDENCIES:
+  - CloudantToolkit
+  - Facebook-iOS-SDK
+  - google-plus-ios-sdk
+  - IMFCore
+  - IMFFacebookAuthentication
+  - IMFGoogleAuthentication
+  - IMFPush
+
+SPEC CHECKSUMS:
+  Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
+  CDTDatastore: 96d55e1a7039992ca47dc92109030935877990dc
+  CloudantQueryObjc: 80a9e87af3929b30966cd5449461375bac0fc47e
+  CloudantToolkit: 1b6caf439b7ab27fa1e4d444840fc5e94d9f645b
+  CocoaLumberjack: 24153b24b17d853d7182b22b128971fb98e8cb18
+  Facebook-iOS-SDK: 3d65f685348b789e46a9aacf92bfa85b60b63755
+  FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
+  google-plus-ios-sdk: bb7b918c2ee0d5f5e389c4fddc06d71995481f67
+  IMFCore: 098cfd89224213ed7fa8b871ed1aa6a9e886410c
+  IMFFacebookAuthentication: 5c57d6dd595cb541fdc39c685e674752e0569ed3
+  IMFGoogleAuthentication: d822c923458601577df0210f8f448480a26bc9f2
+  IMFPush: 376f7323a2861d8e65284350f99bb5f5ed05b75d
+
+COCOAPODS: 0.35.0

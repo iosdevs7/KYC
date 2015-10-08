@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/CDTPropertySerializer.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/CDTPropertySerializer</TokenIdentifier>
+			<Abstract type="html">Provides a custom serializer for a class.  You can handle cross-platform serialization of any object or override the default serialization of an object.  For example, CDTDataObjectMapper serializes NSDate objects.  However, you can use this extension to override how NSDate is serialized.  You might also provide serialization of CLLocation objects, which are currently ignored by the CDTDataObjectMapper.</Abstract>
+			<DeclaredIn>CDTPropertySerializer.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/CDTPropertySerializer/propertyValueToJSONValue:error:</TokenIdentifier>
+			<Abstract type="html">Creates a JSON object from a given an NSObject.  If it is not a valid JSON object, an execption is thrown.</Abstract>
+			<DeclaredIn>CDTPropertySerializer.h</DeclaredIn>
+			
+			<Declaration>- (id)propertyValueToJSONValue:(id)propertyValue error:(NSError **)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>propertyValue</Name>
+					<Abstract type="html">The Objective C property value to be serialized to a JSON dictionary.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">Errors if any that occured during serialization.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The JSON Object object that will be stored in the JSON document.</Abstract></ReturnValue>
+			<Anchor>//api/name/propertyValueToJSONValue:error:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/CDTPropertySerializer/jsonValueToPropertyValue:error:</TokenIdentifier>
+			<Abstract type="html">Converts the NSDictionary to an NSObject, given an JSON NSDictionary.  The data type can be used to identify the NSDictionary as corresponding to a native class (without parsing its contents).</Abstract>
+			<DeclaredIn>CDTPropertySerializer.h</DeclaredIn>
+			
+			<Declaration>- (id)jsonValueToPropertyValue:(id)jsonValue error:(NSError **)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>jsonValue</Name>
+					<Abstract type="html">Specifies the JSON Object to convert back to the original NSObject.  Use the data type to identify the Class.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">Specifies any errors that occured during serialization.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An NSObject with the corresponding data type Class.  The object contains the JSON content.</Abstract></ReturnValue>
+			<Anchor>//api/name/jsonValueToPropertyValue:error:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

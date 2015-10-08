@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextView *myTextView;
+@property (weak, nonatomic) IBOutlet UILabel *description;
+- (IBAction)speakButton:(id)sender;
+
 
 @end
 

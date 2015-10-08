@@ -1,0 +1,2 @@
+PODS_CLOUDANTTOOLKIT_FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/CloudantToolkit/frameworks"
+PODS_CLOUDANTTOOLKIT_OTHER_LDFLAGS = -l"sqlite3" -l"z" -framework "CloudantToolkit" -framework "SystemConfiguration"

@@ -1,0 +1,2 @@
+PODS_IMFPUSH_FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/IMFPush/frameworks"
+PODS_IMFPUSH_OTHER_LDFLAGS = -l"stdc++.6" -l"z" -framework "IMFPush"
